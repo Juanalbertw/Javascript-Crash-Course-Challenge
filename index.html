@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+  <title>Redo Challenge</title>
+</head>
+
+<body>
+  <div class="container-1">
+    <h2>Challenge 1: Days Until Your Birthday</h2>
+
+    <div class="flex-box-container-1">
+      <div>
+        <button class="btn btn-primary" onClick="findDaysUntilBirthday()">Click Me</button>
+      </div>
+      <div>
+        <button class="btn btn-danger" onClick="reset()">Reset</button>
+      </div>
+    </div>
+
+    <div class="flex-box-container-1">
+      <div id="flex-box-result"></div>
+    </div>
+  </div>
+
+  <div class="container-2">
+    <h2>Challenge 2: Cat Generator</h2>
+
+    <div class="flex-box-container-1">
+      <div>
+        <p>Choose cat image width:</p>
+        <form>
+          <input type="radio" id="default" name="catImageSize" value="default" checked="checked">
+          <label for="small">Default</label><br>
+          <input type="radio" id="small" name="catImageSize" value="small">
+          <label for="small">Small: 200px</label><br>
+          <input type="radio" id="medium" name="catImageSize" value="medium">
+          <label for="medium">Medium: 500px</label><br>
+          <input type="radio" id="large" name="catImageSize" value="large">
+          <label for="large">Large: 800px</label>
+        </form>
+      </div>
+    </div>
+
+    <div class="flex-box-container-1">
+      <div>
+        <button class="btn btn-success" onClick="generateCat()">Generate Cat</button>
+      </div>
+      <div>
+        <button class="btn btn-warning" onClick="resizeCatImages()">Resize</button>
+      </div>
+      <div>
+        <button class="btn btn-danger" onClick="removeImages()">Reset</button>
+      </div>
+    </div>
+
+    <div class="flex-box-container-2" id="flex-cat-gen"></div>
+  </div>
+
+  <div class="container-3">
+    <h2>Challenge 3: Rock, Paper, Scissors</h2>
+
+    <div class="flex-box-rps" id="flex-box-rps-div">
+      <img src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="" id="rock"
+        height=150 width=150 onclick="rpsGame(this)">
+      <img
+        src="https://www.pngitem.com/pimgs/m/266-2667252_transparent-rock-paper-scissors-clipart-rock-paper-scissors.png"
+        alt="" id="paper" height=150 width=150 onclick="rpsGame(this)">
+      <img src="https://www.kindpng.com/picc/m/502-5025794_rock-paper-scissors-clipart-hd-png-download.png" alt=""
+        id="scissors" height=150 width=150 onclick="rpsGame(this)">
+    </div>
+  </div>
+
+  <div class="container-4">
+    <h2>Challenge 4: Change the Color of All Buttons!</h2>
+
+    <div class="flex-box-pick-color">
+      <div>
+        <form action="" style="margin-bottom: 10px;">
+          <select name="backdrop" id="background" onChange="buttonColorChange(this)">
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="reset">Reset</option>
+            <option value="special">Special</option>
+          </select>
+        </form>
+        <input name="Color Picker" type="color" id="color" />
+      </div>
+      <div>
+        <button class="btn btn-primary">Wee!</button>
+      </div>
+      <div>
+        <button class="btn btn-danger">Yahoo!</button>
+      </div>
+      <div>
+        <button class="btn btn-warning">Google!</button>
+      </div>
+      <div>
+        <button class="btn btn-success">Facebook!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-5">
+    <h2>Challenge 5: Blackjack</h2>
+    <h3><span id="blackjack-result">Let's play!</span></h3>
+
+    <div class="flex-blackjack-row-1">
+      <div id="your-box">
+        <h2>You: <span id="your-blackjack-result">0</span></h2>
+      </div>
+
+      <div id="dealer-box">
+        <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+      </div>
+    </div>
+
+    <div class="flex-blackjack-row-lower">
+
+      <div class="flex-blackjack-row-2">
+        <div>
+          <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+          <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">Stand</button>
+          <button class="btn-lg btn-danger" id="blackjack-deal-button">Deal</button>
+        </div>
+      </div>
+
+      <div class="flex-blackjack-row-3">
+        <table>
+          <tr>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+          </tr>
+
+          <tr>
+            <td><span id="wins">0</span></td>
+            <td><span id="losses">0</span></td>
+            <td><span id="draws">0</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/script.js"></script>
+</body>
+
+</html>
